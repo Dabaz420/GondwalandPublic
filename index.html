@@ -79,6 +79,11 @@
     function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark-mode') {
+      document.body.classList.add('dark-mode');
     }
   </script>
 
